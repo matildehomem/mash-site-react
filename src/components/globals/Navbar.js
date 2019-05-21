@@ -13,7 +13,6 @@ export default function Navbar() {
                 </button>
                 <div className="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
                     <a className="btn navbar-btn text-white mx-2" href="/about" target="_self">About me</a>
-                    <a className="btn navbar-btn text-white mx-2 btn-primary" href="./static/Mash_CV.pdf" target="_blank">Download CV</a>
                 </div>
             </div>
         </nav>
