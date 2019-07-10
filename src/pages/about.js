@@ -4,11 +4,25 @@ import Layout from "../components/layout"
 import About from '../components/about/About'
 import Nutshell from "../components/about/Nutshell";
 
-const SecondPage = () => (
+const AboutPage = ({data}) => (
   <Layout>
-    <About />
+    <About items={data.skills}/>
     <Nutshell/>
   </Layout>
 )
 
-export default SecondPage
+export const query = graphql`
+{
+    skills:allContentfulSkills {
+    edges {
+      node {
+        id
+        name
+        value  
+      }
+    }
+  }
+}
+`
+
+export default AboutPage

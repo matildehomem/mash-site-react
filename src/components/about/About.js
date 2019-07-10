@@ -1,35 +1,38 @@
 import React, { Component } from 'react'
 
 export default class About extends Component {
-  state = {
-    skills: [
-      {
-        id: 1,
-        name: 'HTML',
-        value: '90'
-      },
-      {
-        id: 2,
-        name: 'CSS',
-        value: '90'
-      },
-      {
-        id: 3,
-        name: 'SASS',
-        value: '85'
-      },
-      {
-        id: 4,
-        name: 'JS',
-        value: '70'
-      },
-      {
-        id: 5,
-        name: 'React',
-        value: '60',
-      },
+  // state = {
+    // skills: [
+    //   {
+    //     id: 1,
+    //     name: 'HTML',
+    //     value: '90'
+    //   },
+    //   {
+    //     id: 2,
+    //     name: 'CSS',
+    //     value: '90'
+    //   },
+    //   {
+    //     id: 3,
+    //     name: 'SASS',
+    //     value: '85'
+    //   },
+    //   {
+    //     id: 4,
+    //     name: 'JS',
+    //     value: '70'
+    //   },
+    //   {
+    //     id: 5,
+    //     name: 'React',
+    //     value: '60',
+    //   },
 
-    ]
+    // ]
+    // }
+    state = {
+      items: this.props.items.edges,
   }
   render() {
     return (
@@ -42,13 +45,13 @@ export default class About extends Component {
             </div>
           </div>
           <div className="mb-3 mx-auto animation-bar__wrapper">
-          {
-            this.state.skills.map(item => {
+
+          {this.state.items.map(({ node }) => {
               return (
-                <div key={item.id}>
-                  <p className="m-0">{item.name}</p>
-                  <div className={ `animation-bar__item animation-bar__item--${item.value}` }>
-                    <span data-label={`${item.value}%`}></span>
+                <div key={node.id}>
+                  <p className="m-0">{node.name}</p>
+                  <div className={ `animation-bar__item animation-bar__item--${node.value}` }>
+                    <span data-label={`${node.value}%`}></span>
                   </div>
                 </div>
               )
