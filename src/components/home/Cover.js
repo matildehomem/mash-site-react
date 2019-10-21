@@ -4,12 +4,13 @@ import { FaGithub, FaLinkedin, FaBehance } from 'react-icons/fa';
 export default function Cover() {
     return (
         <div className="pt-5 bg-primary cover">
-            <div className="container mt-5 pt-5">
+            <div className="container mt-2 pt-5">
                 <div className="row">
-                    <div className="col-md-6 my-5 text-lg-left text-center align-self-center">
+                    <div className="col-md-12 my-5 text-center align-self-center">
                         <h1 className="display-1" >mash</h1>
                         <p className="lead">matilde de aragão soares homem</p>
                         <div className="row">
+                            <div className="col-md-3"></div>
                             <div className="align-self-center col-md-2 my-3 col-4">
                                 <a href="https://github.com/matildehomem" target="_blank" rel="noopener noreferrer">
                                     <FaGithub className="icon" />
